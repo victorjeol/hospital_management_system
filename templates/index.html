@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<br><br>
+<h3 class="text-center">Admin Dashboard</h3>
+<br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 mydivstyle">
+            <h2 style="color: red;">{{d}}</h2>
+            <a href="{% url 'view_doctor' %}" style="text-decoration: none;">
+              <h4 style="color: blue">Doctors</h4>
+              <hr class="rounded">
+            </a>
+        </div>
+        <div class="col-sm-4 mydivstyle">
+            <h2 style="color: red;">{{p}}</h2>
+            <a href="{% url 'view_patient' %}" style="text-decoration: none;">
+              <h4 style="color: blue">Patients</h4>
+              <hr class="rounded">
+            </a>
+        </div>
+        <div class="col-sm-4 mydivstyle">
+            <h2 style="color: red;">{{a}}</h2>
+            <a href="{% url 'view_appointment' %}" style="text-decoration: none;">
+              <h4 style="color: blue">Appointments</h4>
+              <hr class="rounded">
+            </a>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

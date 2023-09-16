@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+{% include "navigation.html" %}
+{% block content %}
+
+
+{% ifequal error "No" %}
+<script>
+    alert('logged in successfully');
+    window.location = "{% url 'dasboard' %}";
+</script>
+{% endifequal %}
+
+{% ifequal error "yes" %}
+<script>
+    alert('invalid login try again');
+</script>
+{% endifequal %}
+   <div class="container">
+    <div class="row mt-5">
+    <div class="col-md-6 offset-md-3">
+    <div class="border  p-3" style="color: black;"> 
+    <h5>Admin login page</h5>
+    <hr>  
+    <form method="POST">
+    {% csrf_token %}
+    <label>Admin Name</label>
+    <input type="text" class="form-control" name="uname" style="padding: 10px; width: 100%; margin: 6px; background-color: gainsboro; color: black; text-align: center; border-radius: 15px; "/> 
+    <label>Password</label>
+    <input type="password" class="form-control" name="pwd" style="padding: 10px; width: 100%; margin: 6px; background-color: gainsboro; color: black; text-align: center; border-radius: 15px; "/>
+    <input class="btn" type="submit" value="Login" style="color: white; padding: 10px;  border-radius: 15px; background-color: orangered;" />
+    
+    </form>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}
