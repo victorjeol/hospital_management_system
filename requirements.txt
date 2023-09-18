@@ -9,7 +9,7 @@ django-crispy-forms==1.14.0
 django-honeypot-signals==0.1.1
 django-smtp-ssl==1.0
 django-ssl-smtp==2.0.0
-django-upgrade==1.11.0
+django-upgrade==1.0.0
 gunicorn==21.2.0
 idna==3.4
 packaging==23.1
